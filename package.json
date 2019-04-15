@@ -1,0 +1,22 @@
+{
+  "name": "otaku-catering-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "helmet": "^3.16.0",
+    "knex": "^0.16.5",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
