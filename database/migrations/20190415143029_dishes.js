@@ -2,10 +2,9 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('dishes', dish => {
       dish.increments()
-      dish.string('name').unique().notNullable()
-      dish.string('imageUrl').unique().notNullable()
-      dish.string('ingredients').notNullable()
-      dish.string('description', 250).unique().notNullable()
+      dish.string('name', 100).unique()
+      dish.string('imageUrl').unique()
+      dish.string('description', 250).unique()
   })
 };
 
