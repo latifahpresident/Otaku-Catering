@@ -71,7 +71,7 @@ exports.postADish = async  ( req, res,) => {
         
             const newDish = await dish.postNewDish({name, description, imageUrl})
             res.status(201).json({
-                msg: 'new dish added',
+                msg: 'A new dish added',
                 imageUrl: req.file.filename})
         
     } catch (err) {
