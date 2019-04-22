@@ -101,7 +101,6 @@ exports.editDish = async (req, res, next) => {
 
 exports.deleteADish = async (req, res, next) => {
     const { id } = req.params;
-    // dish.getDishById(id)
     try {
         const dishData = await dish.deleteDish(req.params.id)
         if (dishData) {
