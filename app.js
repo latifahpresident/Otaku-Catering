@@ -9,7 +9,7 @@ const dishRoutes = require('./routes/dishRoutes');
 
 const app = express()
 
-const accessLogStream = fs.createWriteStream( //writting morgan logs to file
+const accessLogStream = fs.createWriteStream( 
     path.join(__dirname, 'access.log'),
     { flags: 'a'} //append new logs and not override files
 );

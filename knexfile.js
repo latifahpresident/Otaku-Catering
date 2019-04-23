@@ -7,9 +7,9 @@ module.exports = {
     client: 'mysql2',
     connection: {
       host: process.env.DATABASE_HOST,
-      user: process.env.DATABASE_USERNAME,
       database: process.env.DATABASE,
-      password: process.env.DATABASE_PASSWORD
+      user: process.env.DATABASE_USERNAME,
+      password: process.env.DATABASE_PASSWORD,
     },
     migrations: {
       directory: './database/migrations/',
@@ -22,12 +22,12 @@ module.exports = {
 
   staging: {
     client: 'mysql2',
-    connection: {
-      host: process.env.DATABASE_HOST,
-      user: process.env.DATABASE_USERNAME,
-      database: process.env.DATABASE,
-      password: process.env.DATABASE_PASSWORD
-    },
+      connection: {
+        host: process.env.DATABASE_HOST,
+        database: process.env.DATABASE,
+        user: process.env.DATABASE_USERNAME,
+        password: process.env.DATABASE_PASSWORD
+      },
     pool: {
       min: 2,
       max: 10
@@ -45,9 +45,9 @@ module.exports = {
     client: 'mysql2',
     connection: {
       host: process.env.DATABASE_HOST,
-      user: process.env.DATABASE_USERNAME,
       database: process.env.DATABASE,
-      password: process.env.DATABASE_PASSWORD
+      user: process.env.DATABASE_USERNAME,
+      password: process.env.DATABASE_PASSWORD,
     },
     pool: {
       min: 2,
