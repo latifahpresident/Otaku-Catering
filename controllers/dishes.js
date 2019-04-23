@@ -2,6 +2,7 @@ const dish = require('../models /dish');
 const path = require('path');
 const multer = require('multer');
 const db = require('../database/dbConfig');
+
 const fileStorage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'public')

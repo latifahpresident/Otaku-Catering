@@ -1,6 +1,6 @@
 // Update with your config settings.
 require('dotenv').config();
-
+const mysql = require('mysql2');
 module.exports = {
 
   development: {
@@ -13,11 +13,11 @@ module.exports = {
     },
     pool: {
       connectionLimit : 100,
-    host : process.env.DATABASE_HOST,
-    user : process.env.DATABASE_USERNAME,
-    password : process.env.DATABASE_PASSWORD,
-    database : process.env.DATABASE,
-    debug : 'false'
+      host : process.env.DATABASE_HOST,
+      user : process.env.DATABASE_USERNAME,
+      password : process.env.DATABASE_PASSWORD,
+      database : process.env.DATABASE,
+      debug : 'false'
     },
     migrations: {
       directory: './database/migrations/',
@@ -37,8 +37,10 @@ module.exports = {
         password: process.env.DATABASE_PASSWORD
       },
     pool: {
-      min: 2,
-      max: 10
+      host: process.env.DATABASE_HOST,
+        database: process.env.DATABASE,
+        user: process.env.DATABASE_USERNAME,
+        password: process.env.DATABASE_PASSWORD
     },
     migrations: {
       directory: './database/migrations/',
@@ -58,8 +60,10 @@ module.exports = {
       password: process.env.DATABASE_PASSWORD,
     },
     pool: {
-      min: 2,
-      max: 10
+      host: process.env.DATABASE_HOST,
+        database: process.env.DATABASE,
+        user: process.env.DATABASE_USERNAME,
+        password: process.env.DATABASE_PASSWORD
     },
     migrations: {
       directory: './database/migrations/',
